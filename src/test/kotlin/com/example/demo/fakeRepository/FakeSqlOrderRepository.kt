@@ -2,11 +2,11 @@ package com.example.demo.fakeRepository
 //基礎要件はこちらです
 import com.example.demo.controller.Order
 import com.example.demo.controller.SaveOrderRequest
-import com.example.demo.repository.OrderRepository
+import com.example.demo.repository.PeopleRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-class FakeSqlOrderRepository : OrderRepository {
+class FakeSqlOrderRepository : PeopleRepository {
 
     val initData = listOf(
         Order(1, "太郎"),
