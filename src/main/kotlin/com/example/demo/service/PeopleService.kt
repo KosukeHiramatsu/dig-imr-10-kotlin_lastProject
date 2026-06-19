@@ -5,7 +5,7 @@ import java.util.Optional
 
 
 interface PeopleService {
-    fun getPeople(id: Long): Optional<People>
+    fun getPeople(id: Long): People?
     fun getPeopleAll(): List<People>?
     fun savePeople(people:People): People
 //    fun updatePeople(id:Long, people: People): People?

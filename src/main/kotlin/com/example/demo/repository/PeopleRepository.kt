@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface PeopleRepository : JpaRepository<People, Long> {
+    fun findPeopleById (id:Long):People?
+
 }

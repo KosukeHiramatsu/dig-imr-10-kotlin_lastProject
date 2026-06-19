@@ -7,8 +7,8 @@ import java.util.Optional
 
 @Service
 class SqlPeopleService(private val peopleRepository: PeopleRepository): PeopleService {
-    override fun getPeople(id: Long): Optional<People> {
-        return peopleRepository.findById(id)
+    override fun getPeople(id: Long): People? {
+        return peopleRepository.findPeopleById(id)
     }
     override fun getPeopleAll(): List<People>? {
         return peopleRepository.findAll()

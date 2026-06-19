@@ -17,7 +17,7 @@ data class SavePeopleRequest(val name: String, val country: String)
 @RestController
 class PeopleController(private val peopleService: PeopleService) {
     @GetMapping("/peoples/{id}")
-    fun getPeople(@PathVariable id: Long): ResponseEntity<Optional<People>> {
+    fun getPeople(@PathVariable id: Long): ResponseEntity<People> {
         val people = peopleService.getPeople(id)
         println(people)
         return ResponseEntity.status(200).body(people)
